@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupModal()">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <div id="signupMessage"></div>
+        </div>
+    </div>
+    <button id="showSignupBtn" onclick="showSignupModal()">Sign Up</button>
+    <h1>Welcome to My (fake) AI Image Generation Website</h1>
+    <p>This is a sample webpage for generating (fake) AI images.</p>
+<div id="enter_image_prompt_div">
+    <label for="imagePrompt">Enter Image Prompt:</label>
+    <input type="text" id="imagePrompt" placeholder="A beautiful landscape">
+</div>
+<div id="style_choice_div"> 
+    <label for="styleChoice">Choose Style:</label>
+    <select id="styleChoice">
+        <option value="realistic">Realistic</option>
+        <option value="cartoon">Cartoon</option>
+        <option value="abstract">Abstract</option>
+        <option value="digital-art">Digital Art</option>
+        <option value="watercolor">Watercolor</option>
+        <option value="sketch">Sketch</option>
+        <option value="oil-painting">Oil Painting</option>
+        <option value="anime">Anime</option>
+    </select>
+</div>
+<button id="generateButton" onclick="generateImage()">Generate Image</button>
+<div id="fakeurlContainer">
+    <p>Fake URL: <span id="fakeurl"></span></p>
+</div>
+</body>
+
+</html>
